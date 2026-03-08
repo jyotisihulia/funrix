@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Services in Sagrampura, Surat | Funrix Furniture</title>
+
+    <meta
+      name="description"
+      content="Funrix Furniture provides custom furniture, sofa repair, modular kitchen and office furniture services in Sagrampura, Surat. Affordable and premium quality work."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, sans-serif;
+      }
+
+      /* ===== BODY ===== */
+      body {
+        background-color: #f7f7f7;
+        color: #333;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #1f1f1f;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-list li {
+        margin: 0 15px;
+        position: relative;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .nav-list li a:hover {
+        color: #d4af37;
+      }
+
+      /* ===== LOGO ===== */
+      .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 6px;
+        background-color: #fff;
+        border: 3px solid #f4c430;
+      }
+
+      /* ===== DROPDOWN ===== */
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #1f1f1f;
+        list-style: none;
+        padding: 10px 0;
+        display: none;
+        border-radius: 6px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        z-index: 999;
+      }
+
+      .dropdown-menu li {
+        padding: 8px 20px;
+      }
+
+      .dropdown-menu li a {
+        display: block;
+        color: #fff;
+      }
+
+      .dropdown-menu li a:hover {
+        color: #000;
+        border-radius: 4px;
+      }
+
+      /* 🔥 YAHI MAIN FIX HAI */
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      /* Hero Section */
+      /* Hero */
+      .hero {
+        height: 500px;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1615873968403-89e068629265")
+            center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 25px;
+        background: #f4c430;
+        color: #111;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: white;
+      }
+
+      /* About Section */
+
+      /* Section */
+      .section {
+        padding: 60px;
+        background: white;
+      }
+
+      .section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 30px;
+      }
+
+      .section p {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+      }
+      .breadcrumb {
+        background: #f2efef;
+        padding: 15px 80px;
+        font-size: 14px;
+        box-shadow: 0 3px 10px rgba(245, 244, 244, 0.05);
+      }
+      .breadcrumb a {
+        text-decoration: none;
+        color: #666;
+      }
+      .breadcrumb .active {
+        color: #d4af37;
+        font-weight: 600;
+      }
+      /* Services Grid */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+
+      .card {
+        background: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .card:hover {
+        background: #f4c430;
+        transform: translateY(-5px);
+      }
+
+      /* FAQ */
+      .faq {
+        padding: 60px;
+        background: #f9f9f9;
+      }
+
+      .faq h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .faq-item {
+        margin-bottom: 20px;
+      }
+
+      .faq-item h4 {
+        margin-bottom: 8px;
+      }
+
+      .section {
+        padding: 60px 50px;
+        background: #fff;
+      }
+
+      .section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 32px;
+        color: #111;
+      }
+
+      .section p {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      /* Services */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+
+      .card {
+        background: #f4f4f4;
+        padding: 25px;
+        border-radius: 8px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        background: #f4c430;
+        color: #111;
+        transform: translateY(-5px);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #1f1f1f;
+        color: #ddd;
+        padding: 50px 50px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .footer-box h3,
+      .footer-box h4 {
+        color: #d4af37;
+        margin-bottom: 15px;
+      }
+
+      .footer-box p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer-box ul {
+        list-style: none;
+      }
+
+      .footer-box ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-box ul li a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .footer-box ul li a:hover {
+        color: #d4af37;
+      }
+
+      /* Footer Bottom */
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #333;
+        margin-top: 30px;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 28px;
+        }
+
+        .section {
+          padding: 40px 20px;
+        }
+
+        .navbar {
+          padding: 15px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../img/logo1.jpg" alt="Funrix Furniture Logo" />
+        </a>
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../about-us.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="#">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li><a href="../services/bedroom.html">Bedroom Furniture</a></li>
+            <li>
+              <a href="../services/living-room.html">Living Room Furniture</a>
+            </li>
+            <li>
+              <a href="../services/Office-Furniture.html">Office Furniture</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="../gallery.html">GALLERY</a></li>
+        <li><a href="../contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+      <div>
+        <h1>Furniture Services in Sagrampura, Surat</h1>
+        <p>Premium Quality Custom Furniture & Repair Services</p>
+        <a href="../contact.html" class="btn">Get Free Quote</a>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <a href="#">Home</a> / <a href="#">Surat</a> /
+      <span class="active">Adajan</span>
+    </div>
+
+    <!-- About -->
+    <section class="section">
+      <h2>Industry Leader Furniture Service in Sagrampura</h2>
+      <p>
+        Looking for trusted furniture services in Sagrampura, Surat? Our
+        professional carpenters have over 13 years of experience in sofa repair,
+        modular kitchen installation, wardrobe fixing, polishing work and custom
+        furniture making. We ensure quality craftsmanship and customer
+        satisfaction in every project.
+      </p>
+
+      <div class="services">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1583845112203-29329902332e"
+            alt="Sofa Repair"
+          />
+          <h3>Sofa Repair & Upholstery</h3>
+          <p>
+            Complete sofa repair, foam replacement and fabric change services.
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f"
+            alt="Modular Kitchen"
+          />
+          <h3>Modular Kitchen</h3>
+          <p>Modern kitchen design and professional installation.</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1615874959474-d609969a20ed"
+            alt="Custom Furniture"
+          />
+          <h3>Custom Furniture</h3>
+          <p>Custom beds, wardrobes, office tables and storage units.</p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1684338795288-097525d127f0?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Polishing Work"
+          />
+          <h3>Polishing & Finishing</h3>
+          <p>Premium polish work to restore shine and durability.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="section">
+      <h2>Reliable Emergency Furniture Repair</h2>
+      <p>
+        Damaged bed? Broken wardrobe? Loose hinges? Our team provides quick
+        emergency furniture repair services in Sagrampura. We are available for
+        urgent repair needs to prevent further damage.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h4>1. Can I hire a carpenter for furniture inspection?</h4>
+        <p>
+          Yes, we provide annual furniture inspection services to maintain
+          durability and safety.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>2. Will I get an estimate before work starts?</h4>
+        <p>
+          Yes, we provide a proper quotation before starting any repair or
+          installation work.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>3. Do you provide emergency services?</h4>
+        <p>Yes, we offer emergency furniture repair services in Sagrampura.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>4. Do you accept contract work?</h4>
+        <p>
+          Yes, we accept residential and commercial projects on contract basis.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>5. What are the estimated charges?</h4>
+        <p>
+          Small furniture repair: ₹299 - ₹999. Large renovation projects:
+          ₹50,000+ depending on scope.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>About Our Sagrampura Services</h2>
+      <p>
+        We provide professional furniture services in Sagrampura, Surat. Our
+        expert carpenters handle sofa repair, bed repair, modular kitchen,
+        wardrobe installation, office furniture and custom furniture work with
+        premium finishing and affordable pricing.
+      </p>
+
+      <div class="services">
+        <div class="card">
+          <h3>Sofa Repair</h3>
+          <p>Complete sofa repair and polishing service.</p>
+        </div>
+
+        <div class="card">
+          <h3>Modular Kitchen</h3>
+          <p>Modern kitchen design and installation.</p>
+        </div>
+
+        <div class="card">
+          <h3>Custom Furniture</h3>
+          <p>Custom beds, wardrobes and office furniture.</p>
+        </div>
+
+        <div class="card">
+          <h3>Polishing Work</h3>
+          <p>Premium polish and finishing work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- ABOUT -->
+        <div class="footer-box">
+          <h3>Funrix Furniture House</h3>
+          <p>
+            Funrix Furniture House crafts elegant, durable, and comfortable
+            furniture for modern homes and offices. Premium designs that
+            transform your space with style and comfort.
+          </p>
+        </div>
+
+        <!-- AREAS -->
+        <div class="footer-box">
+          <h4>Areas We Service</h4>
+          <ul>
+            <li><a href="vesu-furniture.html">Vesu</a></li>
+            <li><a href="adajan.html">Adajan</a></li>
+            <li><a href="Nanpura.html">Nanpura</a></li>
+            <li><a href="Sagrampura.html">Sagrampura</a></li>
+            <li>
+              <strong>And<a href="#">MORE!</a></strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IMPORTANT LINKS -->
+        <div class="footer-box">
+          <h4>Important Links</h4>
+          <ul>
+            <li><a href="../about-us.html">About Us</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li>
+              <a href="../important-links/privacy.html">Privacy Notice</a>
+            </li>
+
+            <li>
+              <a href="../important-links/cookies-policy.html"
+                >Cookies Policy</a
+              >
+            </li>
+            <li>
+              <a href="../important-links/terms-conditions.html"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+          <h4>Contact Us</h4>
+          <p>🕒 Mon - Sat: 9:00 a.m. - 6:00 p.m.</p>
+          <p>📍 1/919, Nanpura, Surat – 395001</p>
+          <p>📞 +91 942-821-3314</p>
+          <p><a href="#">jyoti.sahani@buldel.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026, <strong>Funrix Furniture House</strong> | All Rights Reserved.
+        <br />
+        Funrix Furniture — Elegant, Durable & Comfortable Designs <br />
+        ⭐ 4.9 / 5 stars | Trusted by 8,006+ Customers
+      </div>
+    </footer>
+  </body>
+</html>

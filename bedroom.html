@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- SEO -->
+    <title>Bedroom Furniture Services | Funrix Furniture Surat</title>
+    <meta
+      name="description"
+      content="Premium bedroom furniture services in Surat. Custom beds, wardrobes, dressing tables and complete bedroom interior solutions."
+    />
+    <meta
+      name="keywords"
+      content="bedroom furniture Surat, custom bed, wardrobe furniture, bedroom interior"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f6f6f6;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #1f1f1f;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-list li {
+        margin: 0 15px;
+        position: relative;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .nav-list li a:hover {
+        color: #d4af37;
+      }
+
+      /* ===== LOGO ===== */
+      .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 6px;
+        background-color: #fff;
+        border: 3px solid #f4c430;
+      }
+
+      /* DROPDOWN */
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #1f1f1f;
+        min-width: 220px;
+        list-style: none;
+        display: none;
+        border-radius: 6px;
+        padding: 10px 0;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .dropdown-menu li {
+        padding: 8px 20px;
+      }
+
+      .dropdown-menu a {
+        color: #fff;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      /* SEARCH */
+      .rightNav {
+        display: flex;
+        gap: 10px;
+      }
+
+      .rightNav input {
+        padding: 7px 12px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+      }
+
+      .rightNav button {
+        padding: 7px 18px;
+        background: #f4c430;
+        border: none;
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        height: 90vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/gallery/bedroom/classic-contemporary-bedroom-in-deep-blue-shades-with-wooden-bedside-tables/elegant-master-bedroom-decor.jpg")
+            center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 650px;
+        margin: auto;
+        color: #eee;
+      }
+
+      /* ===== SECTION ===== */
+      section {
+        padding: 70px 0;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .container h2 {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      .container p {
+        text-align: center;
+        max-width: 800px;
+        margin: auto;
+        color: #555;
+      }
+
+      /* ===== SERVICES ===== */
+      .services-list {
+        margin-top: 45px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .service-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: 0.35s;
+      }
+
+      .service-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-box h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #222;
+      }
+
+      /* ===== CTA ===== */
+      .cta {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://s3.ap-south-1.amazonaws.com/images.woodenstreet.de/image/data/Blog%20images/5thAugust/1.jpg")
+            center/cover no-repeat;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      .cta p {
+        color: #ccc;
+      }
+
+      .cta a {
+        display: inline-block;
+        margin-top: 25px;
+        background: #f4c430;
+        color: #000;
+        padding: 13px 34px;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+      .cta a:hover {
+        background: #f4c430;
+        color: #000;
+        transform: translateY(-2px);
+      }
+
+      /* ===== BEDROOM FURNITURE REPAIR SECTION ===== */
+      .repair-section {
+        background: #ffffff;
+        padding: 80px 0;
+      }
+
+      .repair-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      /* IMAGE */
+      .repair-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 14px;
+        object-fit: cover;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      /* CONTENT */
+      .repair-content h2 {
+        font-size: 34px;
+        margin-bottom: 20px;
+        color: #222;
+      }
+
+      .repair-content p {
+        font-size: 15px;
+        color: #555;
+        margin-bottom: 14px;
+        line-height: 1.8;
+      }
+
+      /* BUTTON */
+      .repair-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 32px;
+        background: #f4c430;
+        color: #000;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .repair-btn:hover {
+        background: #d4af37;
+        transform: translateY(-2px);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .repair-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .repair-content h2 {
+          font-size: 28px;
+        }
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background-color: #1f1f1f;
+        color: #ddd;
+        padding: 50px 50px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .footer-box h3,
+      .footer-box h4 {
+        color: #d4af37;
+        margin-bottom: 15px;
+      }
+
+      .footer-box p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer-box ul {
+        list-style: none;
+      }
+
+      .footer-box ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-box ul li a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .footer-box ul li a:hover {
+        color: #d4af37;
+      }
+
+      /* Footer Bottom */
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #333;
+        margin-top: 30px;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .rightNav {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 34px;
+        }
+
+        .cta h2 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../img/logo1.jpg" alt="Funrix Furniture Logo" />
+        </a>
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../about-us.html">ABOUT US</a></li>
+
+        <li class="dropdown">
+          <a href="#">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li><a href="bedroom.html">Bedroom Furniture</a></li>
+            <li>
+              <a href="living-room.html">Living Room Furniture</a>
+            </li>
+            <li>
+              <a href="Office-Furniture.html">Office Furniture</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="../gallery.html">GALLERY</a></li>
+        <li><a href="../contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <h1>Bedroom Furniture Services</h1>
+        <p>Custom-designed premium bedroom furniture for modern homes.</p>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section>
+      <div class="container">
+        <h2>Our Bedroom Furniture Services</h2>
+        <p>
+          We provide complete bedroom interior solutions with premium materials
+          and modern designs.
+        </p>
+
+        <div class="services-list">
+          <div class="service-box">
+            <h3>Custom Beds</h3>
+            <p>Stylish and durable beds designed as per your space.</p>
+          </div>
+
+          <div class="service-box">
+            <h3>Wardrobes</h3>
+            <p>Sliding & modular wardrobes with smart storage.</p>
+          </div>
+
+          <div class="service-box">
+            <h3>Dressing Tables</h3>
+            <p>Modern dressing tables with premium finish.</p>
+          </div>
+
+          <div class="service-box">
+            <h3>Complete Interior</h3>
+            <p>End-to-end bedroom interior design solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Need Custom Bedroom Furniture?</h2>
+      <p>Contact us today for premium solutions in Surat.</p>
+      <a href="../contact.html">Get in Touch</a>
+    </div>
+
+    <section class="repair-section">
+      <div class="repair-container">
+        <!-- IMAGE SIDE -->
+        <div class="repair-image">
+          <img
+            src="https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/gallery/bedroom/boho-chic-bedroom-with-arched-botanical-wallpaper-and-cane-furniture/bedroom-with-cane-headboard.jpg"
+            alt="Bedroom Furniture Repairing Service"
+          />
+        </div>
+
+        <!-- CONTENT SIDE -->
+        <div class="repair-content">
+          <h2>Bedroom Furniture Repairing Services</h2>
+
+          <p>
+            Funrix Furniture House provides professional and reliable bedroom
+            furniture repairing services in Surat. Over time, furniture can lose
+            its strength, shine, and comfort due to regular use, moisture, or
+            shifting. Our expert craftsmen restore your furniture to its
+            original beauty and durability.
+          </p>
+
+          <p>
+            We specialize in repairing beds, wardrobes, dressing tables, storage
+            units, hinges, sliders, drawers, laminates, and wooden panels.
+            Whether it is a minor repair or complete refurbishment, our team
+            ensures high-quality workmanship using premium materials.
+          </p>
+
+          <p>
+            Our bedroom furniture repairing service helps you save money by
+            extending the life of your existing furniture instead of replacing
+            it. We focus on strength, finishing, alignment, and smooth
+            functionality so your furniture looks and feels brand new.
+          </p>
+
+          <p>
+            With years of experience and hundreds of satisfied customers, Funrix
+            Furniture House is trusted for timely service, transparent pricing,
+            and long-lasting results. We handle both residential and commercial
+            bedroom furniture repair projects with equal care and
+            professionalism.
+          </p>
+
+          <a href="../contact.html" class="repair-btn">Book Repair Service</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- ABOUT -->
+        <div class="footer-box">
+          <h3>Funrix Furniture House</h3>
+          <p>
+            Funrix Furniture House crafts elegant, durable, and comfortable
+            furniture for modern homes and offices. Premium designs that
+            transform your space with style and comfort.
+          </p>
+        </div>
+
+        <!-- AREAS -->
+        <div class="footer-box">
+          <h4>Areas We Service</h4>
+          <ul>
+            <li><a href="../areas/vesu-furniture.html">Vesu</a></li>
+            <li><a href="/areas/adajan.html">Adajan</a></li>
+            <li><a href="../areas/Nanpura.html">Nanpura</a></li>
+            <li><a href="../areas/Sagrampura.html">Sagrampura</a></li>
+            <li>
+              <strong>And<a href="#">MORE!</a></strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IMPORTANT LINKS -->
+        <div class="footer-box">
+          <h4>Important Links</h4>
+          <ul>
+            <li><a href="../about-us.html">About Us</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li>
+              <a href="../important-links/privacy.html">Privacy Notice</a>
+            </li>
+
+            <li>
+              <a href="../important-links/cookies-policy.html">
+                Cookies Policy
+              </a>
+            </li>
+
+            <li>
+              <a href="../important-links/terms-conditions.html">
+                Terms & Conditions
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+          <h4>Contact Us</h4>
+          <p>🕒 Mon - Sat: 9:00 a.m. - 6:00 p.m.</p>
+          <p>📍 1/919, Nanpura, Surat – 395001</p>
+          <p>📞 +91 942-821-3314</p>
+          <p>✉️ jyoti.sahani@buldel.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026, <strong>Funrix Furniture House</strong> | All Rights Reserved.
+        <br />
+        Funrix Furniture — Elegant, Durable & Comfortable Designs <br />
+        ⭐ 4.9 / 5 stars | Trusted by 8,006+ Customers
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Office Furniture Services | Funrix Furniture Surat</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Premium office furniture services in Surat. Workstations, office chairs, cabins, conference tables & office furniture repairing."
+    />
+    <meta
+      name="keywords"
+      content="office furniture Surat, workstation furniture, office chairs, office furniture repair"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, sans-serif;
+      }
+
+      /* ===== BODY ===== */
+      body {
+        background-color: #f7f7f7;
+        color: #333;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #121212;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-list li {
+        margin: 0 15px;
+        position: relative;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .nav-list li a:hover {
+        color: #d4af37;
+      }
+
+      /* ===== LOGO ===== */
+      .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 6px;
+        background-color: #fff;
+        border: 3px solid #f4c430;
+      }
+
+      /* ===== DROPDOWN ===== */
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #1f1f1f;
+        list-style: none;
+        padding: 10px 0;
+        display: none;
+        border-radius: 6px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        z-index: 999;
+      }
+
+      .dropdown-menu li {
+        padding: 8px 20px;
+      }
+
+      .dropdown-menu li a {
+        display: block;
+        color: #fff;
+      }
+
+      .dropdown-menu li a:hover {
+        color: #f9d406;
+        border-radius: 4px;
+      }
+
+      /* 🔥 YAHI MAIN FIX HAI */
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      /* SEARCH */
+      .rightNav {
+        display: flex;
+        gap: 10px;
+      }
+      .rightNav input {
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: none;
+      }
+      .rightNav button {
+        padding: 8px 18px;
+        background: #f4c430;
+        border: none;
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        height: 90vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1524758631624-e2822e304c36")
+            center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+      }
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 18px;
+        color: #ddd;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      /* ===== COMMON ===== */
+      section {
+        padding: 80px 0;
+      }
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .title h2 {
+        font-size: 34px;
+        margin-bottom: 10px;
+      }
+      .title p {
+        color: #666;
+      }
+
+      /* ===== SERVICES ===== */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+      .service-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+      .service-box:hover {
+        transform: translateY(-8px);
+      }
+      .service-box h3 {
+        margin-bottom: 10px;
+        color: #222;
+      }
+
+      /* ===== WHY US ===== */
+      .why {
+        background: #fff;
+      }
+      .why-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+      }
+      .why-box {
+        background: #f9f9f9;
+        padding: 25px;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      /* ===== REPAIR SECTION ===== */
+      .repair {
+        background: #ffffff;
+      }
+      .repair-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+      .repair img {
+        width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+      .repair h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+      .repair p {
+        color: #555;
+        margin-bottom: 12px;
+      }
+      .repair a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 30px;
+        background: #f4c430;
+        color: #000;
+        font-weight: 600;
+        border-radius: 6px;
+      }
+
+      /* ===== CTA ===== */
+      .cta {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1503387762-592deb58ef4e")
+            center/cover no-repeat;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+      }
+      .cta h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+      .cta a {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 14px 36px;
+        background: #f4c430;
+        color: #000;
+        font-weight: 600;
+        border-radius: 6px;
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background: #1f1f1f;
+        color: #ddd;
+        padding: 50px 50px 20px;
+      }
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+      .footer h3,
+      .footer h4 {
+        color: #f4c430;
+        margin-bottom: 15px;
+      }
+     .footer-box p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+   
+      .footer ul {
+        list-style: none;
+      
+      }
+      .footer ul li {
+        margin-bottom: 8px;
+      }
+      .footer ul li a {
+          text-decoration: none;
+        color: #ddd;
+      }
+      .footer-bottom {
+        border-top: 1px solid #333;
+        margin-top: 30px;
+        padding-top: 15px;
+        text-align: center;
+        color: #aaa;
+        font-size: 14px;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .rightNav {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 34px;
+        }
+        .repair-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../img/logo1.jpg" alt="Funrix Furniture Logo" />
+      </div>
+
+      <!-- HAMBURGER -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-list" id="navList">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../about-us.html">ABOUT US</a></li>
+
+        <li class="dropdown">
+          <a href="#">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li><a href="services/bedroom.html">Bedroom Furniture</a></li>
+            <li>
+              <a href="services/living-room.html">Living Room Furniture</a>
+            </li>
+            <li>
+              <a href="services/Office-Furniture.html">Office Furniture</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="../gallery.html">GALLERY</a></li>
+        <li><a href="../contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <h1>Office Furniture Solutions</h1>
+        <p>
+          Modern, durable & professional office furniture designed to improve
+          productivity.
+        </p>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section>
+      <div class="container">
+        <div class="title">
+          <h2>Our Office Furniture Services</h2>
+          <p>Complete furniture solutions for corporate & commercial spaces</p>
+        </div>
+
+        <div class="services">
+          <div class="service-box">
+            <h3>Office Workstations</h3>
+            <p>Modern modular workstations for teams.</p>
+          </div>
+          <div class="service-box">
+            <h3>Office Chairs</h3>
+            <p>Ergonomic chairs for comfort & posture.</p>
+          </div>
+          <div class="service-box">
+            <h3>Cabin Furniture</h3>
+            <p>Executive desks & storage units.</p>
+          </div>
+          <div class="service-box">
+            <h3>Conference Tables</h3>
+            <p>Stylish meeting & conference solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why">
+      <div class="container">
+        <div class="title">
+          <h2>Why Choose Funrix Furniture?</h2>
+        </div>
+        <div class="why-list">
+          <div class="why-box">✔ Premium Materials</div>
+          <div class="why-box">✔ Custom Office Design</div>
+          <div class="why-box">✔ Affordable Pricing</div>
+          <div class="why-box">✔ On-Time Delivery</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPAIR -->
+    <section class="repair">
+      <div class="container repair-container">
+        <img
+          src="https://images.unsplash.com/photo-1558002038-1055907df827"
+          alt=""
+        />
+        <div>
+          <h2>Office Furniture Repairing Services</h2>
+          <p>
+            We repair office chairs, workstations, drawers, cabinets, tables &
+            hardware.
+          </p>
+          <p>
+            Save cost by repairing your existing furniture with professional
+            finishing.
+          </p>
+          <a href="../contact.html">Book Repair Service</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Need Office Furniture in Surat?</h2>
+      <p>Contact Funrix Furniture for premium office solutions</p>
+      <a href="../contact.html">Get Quote</a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- ABOUT -->
+        <div class="footer-box">
+          <h3>Funrix Furniture House</h3>
+          <p>
+            Funrix Furniture House crafts elegant, durable, and comfortable
+            furniture for modern homes and offices. Premium designs that
+            transform your space with style and comfort.
+          </p>
+        </div>
+
+        <!-- AREAS -->
+        <div class="footer-box">
+          <h4>Areas We Service</h4>
+          <ul>
+            <li><a href="../areas/vesu-furniture.html">Vesu</a></li>
+            <li><a href="/areas/adajan.html">Adajan</a></li>
+            <li><a href="../areas/Nanpura.html">Nanpura</a></li>
+            <li><a href="../areas/Sagrampura.html">Sagrampura</a></li>
+            <li>
+              <strong>And<a href="#">MORE!</a></strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IMPORTANT LINKS -->
+        <div class="footer-box">
+          <h4>Important Links</h4>
+          <ul>
+            <li><a href="../about-us.html">About Us</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+              <li>
+  <a href="../important-links/privacy.html">Privacy Notice</a>
+</li>
+
+<li>
+  <a href="../important-links/cookies-policy.html">
+    Cookies Policy
+  </a>
+</li>
+
+<li>
+  <a href="../important-links/terms-conditions.html">
+    Terms & Conditions
+  </a>
+</li>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+          <h4>Contact Us</h4>
+          <p>🕒 Mon - Sat: 9:00 a.m. - 6:00 p.m.</p>
+          <p>📍 1/919, Nanpura, Surat – 395001</p>
+          <p>📞 +91 942-821-3314</p>
+          <p>✉️ jyoti.sahani@buldel.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026, <strong>Funrix Furniture House</strong> | All Rights Reserved.
+        <br />
+        Funrix Furniture — Elegant, Durable & Comfortable Designs <br />
+        ⭐ 4.9 / 5 stars | Trusted by 8,006+ Customers
+      </div>
+    </footer>
+  </body>
+</html>

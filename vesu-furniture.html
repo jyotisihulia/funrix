@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Services in Vesu, Surat | Funrix Furniture</title>
+
+    <meta
+      name="description"
+      content="Funrix Furniture provides custom furniture, modular kitchen, bedroom and office furniture services in Vesu, Surat. Premium quality designs at affordable prices."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, sans-serif;
+      }
+
+      body {
+        background: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 60px;
+        background: #1f1f1f;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-list li {
+        margin: 0 18px;
+        position: relative;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      .nav-list li a:hover {
+        color: #d4af37;
+      }
+
+      .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 6px;
+        background: #fff;
+        border: 3px solid #f4c430;
+      }
+
+      /* DROPDOWN */
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #1f1f1f;
+        list-style: none;
+        padding: 10px 0;
+        display: none;
+        border-radius: 6px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu li {
+        padding: 8px 20px;
+      }
+
+      .dropdown-menu li a {
+        color: #fff;
+        display: block;
+      }
+
+      /* HERO */
+      .hero {
+        height: 90vh;
+        background-image: url("https://images.pexels.com/photos/3356416/pexels-photo-3356416.jpeg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .hero p {
+        max-width: 750px;
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        background: #d4af37;
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #c19b2e;
+      }
+
+      /* SECTION */
+      .section {
+        padding: 80px 100px;
+        background: #fff;
+      }
+
+      .section h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      /* ABOUT */
+      .about-flex {
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+      }
+
+      .about-left {
+        flex: 1;
+        min-width: 320px;
+      }
+
+      .about-left img {
+        width: 100%;
+        max-width: 480px;
+        border-radius: 12px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .about-right {
+        flex: 1;
+        min-width: 320px;
+        background: #fafafa;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .about-right h3 {
+        color: #d4af37;
+        margin-bottom: 18px;
+        font-size: 24px;
+      }
+
+      .about-right p {
+        margin-bottom: 14px;
+      }
+
+      .services {
+        padding: 80px 100px;
+        text-align: center;
+      }
+
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+      }
+
+      .card h3 {
+        color: #d4af37;
+        margin-bottom: 15px;
+      }
+
+      /* CTA */
+      .cta {
+        background: #111;
+        color: #fff;
+        text-align: center;
+        padding: 70px 20px;
+      }
+
+      .cta h2 {
+        margin-bottom: 15px;
+      }
+
+      /* FOOTER */
+      .footer {
+        background: #1f1f1f;
+        color: #ddd;
+        padding: 60px 60px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+      }
+
+      .footer-box h3,
+      .footer-box h4 {
+        color: #d4af37;
+        margin-bottom: 18px;
+      }
+
+      .footer-box p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .footer-box ul {
+        list-style: none;
+      }
+
+      .footer-box ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-box ul li a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 14px;
+      }
+
+      .footer-box ul li a:hover {
+        color: #d4af37;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #333;
+        margin-top: 40px;
+        padding-top: 20px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .section {
+          padding: 60px 20px;
+        }
+        .navbar {
+          padding: 15px 20px;
+        }
+        .hero h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="../index.html"></a>
+        <img src="../img/logo1.jpg" alt="Funrix Furniture Logo" />
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../about-us.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="#">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li><a href="../services/bedroom.html">Bedroom Furniture</a></li>
+            <li>
+              <a href="../services/living-room.html">Living Room Furniture</a>
+            </li>
+            <li>
+              <a href="../services/Office-Furniture.html">Office Furniture</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="../gallery.html">GALLERY</a></li>
+        <li><a href="../contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <h1>Premium Furniture Services in Vesu, Surat</h1>
+      <p>
+        Looking for high-quality custom furniture in Vesu? We provide stylish,
+        durable and affordable furniture solutions for homes and offices.
+      </p>
+      <a href="tel:+919428213314" class="btn">Call Now</a>
+    </section>
+
+    <section class="section">
+      <h2>Vesu Furniture Experts – Funrix Furniture</h2>
+
+      <div class="about-flex">
+        <div class="about-left">
+          <img
+            src="https://png.pngtree.com/png-vector/20240602/ourlarge/pngtree-assembling-furniture-flat-set-png-image_12599610.png"
+            alt="Custom Furniture in Vesu"
+          />
+        </div>
+
+        <div class="about-right">
+          <h3>Premium Custom Furniture in Vesu</h3>
+
+          <p>
+            Upgrade your home or office with modern, durable and elegant
+            furniture solutions designed by skilled professionals.
+          </p>
+
+          <p><strong>✔ Custom Sofa & Beds</strong></p>
+          <p><strong>✔ Furniture Repair & Polishing</strong></p>
+          <p><strong>✔ Modular Kitchen & Wardrobes</strong></p>
+          <p><strong>✔ Complete Office Furniture Setup</strong></p>
+
+          <p><strong>Call Now: +91 942-821-3314</strong></p>
+        </div>
+      </div>
+
+      <h2>Premium Furniture Services Across Surat</h2>
+
+      <p>
+        Funrix Furniture provides expert furniture solutions across Vesu and
+        nearby areas. We combine premium materials, modern design and expert
+        craftsmanship to deliver long-lasting results.
+      </p>
+    </section>
+
+    <section class="services">
+      <h2>Our Furniture Services</h2>
+
+      <div class="card-container">
+        <div class="card">
+          <h3>Custom Sofa Making</h3>
+          <p>Premium sofa designs tailored to your home interior.</p>
+        </div>
+
+        <div class="card">
+          <h3>Bedroom Furniture</h3>
+          <p>Strong and stylish beds with modern finishing.</p>
+        </div>
+
+        <div class="card">
+          <h3>Modular Kitchen</h3>
+          <p>Smart storage with elegant kitchen design.</p>
+        </div>
+
+        <div class="card">
+          <h3>Wardrobe & Cabinets</h3>
+          <p>Spacious wardrobes with smooth fittings.</p>
+        </div>
+
+        <div class="card">
+          <h3>Furniture Repair</h3>
+          <p>Professional repair service at affordable prices.</p>
+        </div>
+
+        <div class="card">
+          <h3>Polishing & Finishing</h3>
+          <p>Long-lasting shine and protection for furniture.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Honest & Affordable Furniture Services in Vesu</h2>
+      <p>Contact Funrix Furniture today for a free consultation.</p>
+      <a href="tel:+919428213314" class="btn">Get Free Quote</a>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- ABOUT -->
+        <div class="footer-box">
+          <h3>Funrix Furniture House</h3>
+          <p>
+            Funrix Furniture House crafts elegant, durable, and comfortable
+            furniture for modern homes and offices. Premium designs that
+            transform your space with style and comfort.
+          </p>
+        </div>
+
+        <!-- AREAS -->
+        <div class="footer-box">
+          <h4>Areas We Service</h4>
+          <ul>
+            <li><a href="vesu-furniture.html">Vesu</a></li>
+            <li><a href="adajan.html">Adajan</a></li>
+            <li><a href="Nanpura.html">Nanpura</a></li>
+            <li><a href="Sagrampura.html">Sagrampura</a></li>
+            <li>
+              <strong>And<a href="#">MORE!</a></strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IMPORTANT LINKS -->
+        <div class="footer-box">
+          <h4>Important Links</h4>
+          <ul>
+            <li><a href="../about-us.html">About Us</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li>
+              <a href="../important-links/privacy.html">Privacy Notice</a>
+            </li>
+
+            <li>
+              <a href="../important-links/cookies-policy.html"
+                >Cookies Policy</a
+              >
+            </li>
+            <li>
+              <a href="../important-links/terms-conditions.html"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+          <h4>Contact Us</h4>
+          <p>🕒 Mon - Sat: 9:00 a.m. - 6:00 p.m.</p>
+          <p>📍 1/919, Nanpura, Surat – 395001</p>
+          <p>📞 +91 942-821-3314</p>
+          <p>✉️ jyoti.sahani@buldel.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026, <strong>Funrix Furniture House</strong> | All Rights Reserved.
+        <br />
+        Funrix Furniture — Elegant, Durable & Comfortable Designs <br />
+        ⭐ 4.9 / 5 stars | Trusted by 8,006+ Customers
+      </div>
+    </footer>
+  </body>
+</html>

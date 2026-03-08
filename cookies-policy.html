@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Policy | Funrix Furniture</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f7f7f7;
+        color: #333;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #1f1f1f;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-list li {
+        margin: 0 15px;
+        position: relative;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .nav-list li a:hover {
+        color: #d4af37;
+      }
+
+      .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 6px;
+        background-color: #fff;
+        border: 3px solid #f4c430;
+      }
+
+      /* ===== DROPDOWN ===== */
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #1f1f1f;
+        list-style: none;
+        padding: 10px 0;
+        display: none;
+        border-radius: 6px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        z-index: 999;
+      }
+
+      .dropdown-menu li {
+        padding: 8px 20px;
+      }
+
+      .dropdown-menu li a {
+        display: block;
+        color: #fff;
+      }
+
+      .dropdown-menu li a:hover {
+        color: #d4af37;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      /* ===== HERO ===== */
+      .hero {
+        height: 90vh;
+        background: linear-gradient(
+          135deg,
+          #1a1a1a 0%,
+          #2c2c2c 50%,
+          #1a1208 100%
+        );
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse 60% 50% at 70% 50%,
+            rgba(212, 175, 55, 0.12) 0%,
+            transparent 70%
+          ),
+          radial-gradient(
+            ellipse 40% 60% at 20% 60%,
+            rgba(212, 175, 55, 0.06) 0%,
+            transparent 70%
+          );
+      }
+
+      /* Decorative cookie icon background */
+      .hero::after {
+        content: "🍪";
+        position: absolute;
+        font-size: 280px;
+        opacity: 0.04;
+        right: 8%;
+        top: 50%;
+        transform: translateY(-50%);
+        filter: grayscale(1);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background: rgba(212, 175, 55, 0.15);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        color: #d4af37;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 6px 18px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 12px;
+        letter-spacing: -0.5px;
+      }
+
+      .hero h1 span {
+        color: #d4af37;
+      }
+
+      .hero p {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.55);
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+      /* Thin gold line below hero */
+      .hero-line {
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      }
+
+      /* ===== BREADCRUMB ===== */
+      .breadcrumb {
+        background: #fff;
+        padding: 14px 80px;
+        font-size: 13px;
+        border-bottom: 1px solid #ebebeb;
+        color: #999;
+      }
+
+      .breadcrumb a {
+        text-decoration: none;
+        color: #666;
+        transition: color 0.2s;
+      }
+
+      .breadcrumb a:hover {
+        color: #d4af37;
+      }
+
+      .breadcrumb .sep {
+        margin: 0 8px;
+        color: #ccc;
+      }
+
+      .breadcrumb .active {
+        color: #d4af37;
+        font-weight: 600;
+      }
+
+      /* ===== MAIN LAYOUT ===== */
+      .page-wrapper {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 35px;
+        align-items: start;
+      }
+
+      /* ===== SIDEBAR ===== */
+      .sidebar {
+        position: sticky;
+        top: 90px;
+      }
+
+      .sidebar-card {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        border: 1px solid #f0f0f0;
+      }
+
+      .sidebar-header {
+        background: #1f1f1f;
+        padding: 18px 22px;
+        color: #d4af37;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .sidebar-nav {
+        list-style: none;
+        padding: 10px 0;
+      }
+
+      .sidebar-nav li a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 22px;
+        text-decoration: none;
+        color: #555;
+        font-size: 13.5px;
+        font-weight: 400;
+        transition: all 0.2s;
+        border-left: 3px solid transparent;
+      }
+
+      .sidebar-nav li a:hover,
+      .sidebar-nav li a.active {
+        color: #c89b3c;
+        border-left-color: #d4af37;
+        background: rgba(212, 175, 55, 0.05);
+        padding-left: 26px;
+      }
+
+      .sidebar-nav li a .num {
+        font-size: 11px;
+        color: #bbb;
+        font-weight: 600;
+        min-width: 18px;
+      }
+
+      .sidebar-info {
+        margin-top: 20px;
+        background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+        border-radius: 10px;
+        padding: 22px;
+        color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar-info .icon {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .sidebar-info h4 {
+        color: #d4af37;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .sidebar-info p {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
+      }
+
+      .sidebar-info a {
+        display: inline-block;
+        margin-top: 12px;
+        background: #d4af37;
+        color: #1f1f1f;
+        padding: 8px 18px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        transition: background 0.2s;
+      }
+
+      .sidebar-info a:hover {
+        background: #c89b3c;
+      }
+
+      /* ===== MAIN CONTENT ===== */
+      .main-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 45px 50px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f0f0f0;
+      }
+
+      .content-meta {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding-bottom: 28px;
+        margin-bottom: 35px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .meta-badge {
+        background: rgba(212, 175, 55, 0.12);
+        color: #c89b3c;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 20px;
+      }
+
+      .meta-date {
+        font-size: 13px;
+        color: #999;
+      }
+
+      .meta-date strong {
+        color: #555;
+      }
+
+      .intro-text {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 38px;
+        padding: 22px 26px;
+        background: #fafafa;
+        border-left: 4px solid #d4af37;
+        border-radius: 0 8px 8px 0;
+      }
+
+      /* ===== SECTIONS ===== */
+      .section {
+        margin-bottom: 38px;
+        padding-bottom: 38px;
+        border-bottom: 1px solid #f4f4f4;
+        scroll-margin-top: 100px;
+      }
+
+      .section:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .section-num {
+        width: 32px;
+        height: 32px;
+        background: #1f1f1f;
+        color: #d4af37;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .section h2 {
+        color: #1f1f1f;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+      }
+
+      .section p {
+        font-size: 14.5px;
+        color: #555;
+        line-height: 1.85;
+        margin-bottom: 12px;
+      }
+
+      /* Cookie Type Cards */
+      .cookie-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .cookie-card {
+        border: 1px solid #ececec;
+        border-radius: 10px;
+        padding: 20px 18px;
+        transition: all 0.25s;
+        background: #fafafa;
+      }
+
+      .cookie-card:hover {
+        border-color: #d4af37;
+        background: rgba(212, 175, 55, 0.04);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.12);
+      }
+
+      .cookie-card .card-icon {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+
+      .cookie-card h4 {
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 6px;
+      }
+
+      .cookie-card p {
+        font-size: 12.5px;
+        color: #777;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Uses list */
+      .uses-list {
+        list-style: none;
+        margin-top: 14px;
+      }
+
+      .uses-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px dashed #f0f0f0;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .uses-list li:last-child {
+        border-bottom: none;
+      }
+
+      .uses-list li::before {
+        content: "✦";
+        color: #d4af37;
+        font-size: 11px;
+        margin-top: 4px;
+        flex-shrink: 0;
+      }
+
+      /* Rights grid */
+      .rights-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 16px;
+      }
+
+      .right-item {
+        background: #fafafa;
+        border: 1px solid #eeeeee;
+        border-radius: 8px;
+        padding: 14px 16px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13.5px;
+        color: #555;
+        transition: border-color 0.2s;
+      }
+
+      .right-item:hover {
+        border-color: #d4af37;
+      }
+
+      .right-item .ri-icon {
+        color: #d4af37;
+        font-size: 16px;
+        margin-top: 1px;
+        flex-shrink: 0;
+      }
+
+      /* Contact box */
+      .contact-box {
+        background: linear-gradient(135deg, #1a1a1a, #2d2a1e);
+        border-radius: 10px;
+        padding: 28px 30px;
+        color: #fff;
+        margin-top: 16px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+      }
+
+      .contact-box .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .contact-box .contact-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .contact-box .contact-row .label {
+        color: #d4af37;
+        font-weight: 600;
+        min-width: 60px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* ===== FOOTER ===== */
+      .footer {
+        background-color: #0b0b0b;
+        color: #ddd;
+        padding: 50px 50px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .footer-box h3,
+      .footer-box h4 {
+        color: #d4af37;
+        margin-bottom: 15px;
+      }
+
+      .footer-box p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer-box ul {
+        list-style: none;
+      }
+
+      .footer-box ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-box ul li a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .footer-box ul li a:hover {
+        color: #d4af37;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #111010;
+        margin-top: 30px;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 900px) {
+        .page-wrapper {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          position: static;
+        }
+
+        .main-content {
+          padding: 30px 24px;
+        }
+
+        .rights-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+          font-size: 32px;
+        }
+
+        .navbar {
+          padding: 15px 20px;
+        }
+
+        .breadcrumb {
+          padding: 14px 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../img/logo1.jpg" alt="Funrix Furniture Logo" />
+        </a>
+      </div>
+      <ul class="nav-list">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../about-us.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="#">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li><a href="../services/bedroom.html">Bedroom Furniture</a></li>
+            <li>
+              <a href="../services/living-room.html">Living Room Furniture</a>
+            </li>
+            <li>
+              <a href="../services/Office-Furniture.html">Office Furniture</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="../gallery.html">GALLERY</a></li>
+        <li><a href="../contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">Legal & Transparency</div>
+        <h1>Cookies <span>Policy</span></h1>
+        <p>How we use cookies to improve your experience</p>
+      </div>
+    </section>
+    <div class="hero-line"></div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="sep">/</span>
+      <span class="active">Cookies Policy</span>
+    </div>
+
+    <!-- MAIN PAGE LAYOUT -->
+    <div class="page-wrapper">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-header">On This Page</div>
+          <ul class="sidebar-nav">
+            <li>
+              <a href="#what-are-cookies"
+                ><span class="num">01</span> What Are Cookies?</a
+              >
+            </li>
+            <li>
+              <a href="#how-we-use"
+                ><span class="num">02</span> How We Use Cookies</a
+              >
+            </li>
+            <li>
+              <a href="#types"><span class="num">03</span> Types of Cookies</a>
+            </li>
+            <li>
+              <a href="#managing"
+                ><span class="num">04</span> Managing Cookies</a
+              >
+            </li>
+            <li>
+              <a href="#third-party"
+                ><span class="num">05</span> Third-Party Cookies</a
+              >
+            </li>
+            <li>
+              <a href="#updates"><span class="num">06</span> Policy Updates</a>
+            </li>
+            <li>
+              <a href="#contact"><span class="num">07</span> Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-info">
+          <div class="icon">🛡️</div>
+          <h4>Your Privacy Is Safe</h4>
+          <p>
+            We never sell or share your personal data. Cookies are only used to
+            enhance your browsing experience.
+          </p>
+          <a href="../contact.html">Talk to Us →</a>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="main-content">
+        <div class="content-meta">
+          <span class="meta-badge">Cookies Policy</span>
+          <span class="meta-date"
+            ><strong>Last Updated:</strong> 25 February 2026</span
+          >
+        </div>
+
+        <p class="intro-text">
+          Welcome to <strong>Funrix Furniture</strong>. This Cookies Policy
+          explains how we use cookies and similar technologies when you visit
+          our website. We are committed to protecting your privacy while
+          providing a smooth and personalized browsing experience.
+        </p>
+
+        <!-- 1 -->
+        <div class="section" id="what-are-cookies">
+          <div class="section-title">
+            <div class="section-num">1</div>
+            <h2>What Are Cookies?</h2>
+          </div>
+          <p>
+            Cookies are small text files stored on your device (computer,
+            tablet, or phone) when you visit a website. They help websites
+            remember your preferences and browsing behavior, allowing for a
+            faster and more personalized experience on return visits.
+          </p>
+          <p>
+            Cookies do not contain personally identifiable information on their
+            own — they simply help your browser communicate with our website
+            more effectively.
+          </p>
+        </div>
+
+        <!-- 2 -->
+        <div class="section" id="how-we-use">
+          <div class="section-title">
+            <div class="section-num">2</div>
+            <h2>How Funrix Furniture Uses Cookies</h2>
+          </div>
+          <p>
+            We use cookies to deliver a better, faster, and more secure browsing
+            experience. Specifically, we use them to:
+          </p>
+          <ul class="uses-list">
+            <li>Ensure core website functionality and security</li>
+            <li>Improve website speed and overall performance</li>
+            <li>
+              Understand how visitors navigate and interact with our pages
+            </li>
+            <li>Remember your preferences across sessions</li>
+            <li>Enhance your overall shopping and browsing experience</li>
+            <li>
+              Deliver relevant content and promotions (only with your consent)
+            </li>
+          </ul>
+        </div>
+
+        <!-- 3 -->
+        <div class="section" id="types">
+          <div class="section-title">
+            <div class="section-num">3</div>
+            <h2>Types of Cookies We Use</h2>
+          </div>
+          <p>
+            We categorize our cookies into three types based on their purpose:
+          </p>
+          <div class="cookie-cards">
+            <div class="cookie-card">
+              <div class="card-icon">⚙️</div>
+              <h4>Essential Cookies</h4>
+              <p>
+                Required for core website operations such as page navigation,
+                security, and form submissions. Cannot be disabled.
+              </p>
+            </div>
+            <div class="cookie-card">
+              <div class="card-icon">📊</div>
+              <h4>Analytics Cookies</h4>
+              <p>
+                Help us understand traffic patterns and how users interact with
+                our website, so we can continuously improve.
+              </p>
+            </div>
+            <div class="cookie-card">
+              <div class="card-icon">🎨</div>
+              <h4>Preference Cookies</h4>
+              <p>
+                Store your personal settings and preferences to ensure a more
+                consistent and tailored experience each visit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="section" id="managing">
+          <div class="section-title">
+            <div class="section-num">4</div>
+            <h2>Managing Cookies</h2>
+          </div>
+          <p>
+            You have full control over cookies. You can configure your browser
+            to block, delete, or restrict cookies at any time through your
+            browser settings.
+          </p>
+          <p>
+            Please note that disabling certain cookies — especially essential
+            ones — may impact the performance, functionality, or availability of
+            certain features on our website.
+          </p>
+          <div class="rights-grid">
+            <div class="right-item">
+              <span class="ri-icon">🌐</span>
+              <span>Google Chrome — Settings → Privacy → Cookies</span>
+            </div>
+            <div class="right-item">
+              <span class="ri-icon">🦊</span>
+              <span>Mozilla Firefox — Options → Privacy & Security</span>
+            </div>
+            <div class="right-item">
+              <span class="ri-icon">🧭</span>
+              <span>Safari — Preferences → Privacy</span>
+            </div>
+            <div class="right-item">
+              <span class="ri-icon">🔷</span>
+              <span
+                >Microsoft Edge — Settings → Cookies & Site Permissions</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="section" id="third-party">
+          <div class="section-title">
+            <div class="section-num">5</div>
+            <h2>Third-Party Cookies</h2>
+          </div>
+          <p>
+            Some pages on our website may include content or tools from trusted
+            third-party services (such as Google Analytics or social media
+            plugins). These third-party services may set their own cookies on
+            your device.
+          </p>
+          <p>
+            We do not control third-party cookies. We recommend reviewing the
+            privacy policies of any third-party services you interact with on
+            our website.
+          </p>
+        </div>
+
+        <!-- 6 -->
+        <div class="section" id="updates">
+          <div class="section-title">
+            <div class="section-num">6</div>
+            <h2>Policy Updates</h2>
+          </div>
+          <p>
+            Funrix Furniture may update this Cookies Policy from time to time to
+            reflect changes in technology, law, or our business practices. Any
+            revisions will be posted on this page with an updated date at the
+            top.
+          </p>
+          <p>
+            We encourage you to review this page periodically to stay informed
+            about how we use cookies.
+          </p>
+        </div>
+
+        <!-- 7 -->
+        <div class="section" id="contact">
+          <div class="section-title">
+            <div class="section-num">7</div>
+            <h2>Contact Us</h2>
+          </div>
+          <p>
+            If you have any questions or concerns about this Cookies Policy or
+            how we handle your data, please don't hesitate to reach out to us:
+          </p>
+          <div class="contact-box">
+            <div class="contact-row">
+              <span class="label">Business</span>
+              Funrix Furniture House
+            </div>
+            <div class="contact-row">
+              <span class="label">Address</span>
+              1/919, Nanpura, Surat – 395001
+            </div>
+            <div class="contact-row">
+              <span class="label">Phone</span>
+              +91 94282 13315
+            </div>
+            <div class="contact-row">
+              <span class="label">Email</span>
+              service@funrixfurniture.com
+            </div>
+            <div class="contact-row">
+              <span class="label">Hours</span>
+              Mon – Sat: 9:00 AM – 6:00 PM
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Funrix Furniture House</h3>
+          <p>
+            Funrix Furniture House crafts elegant, durable, and comfortable
+            furniture for modern homes and offices. Premium designs that
+            transform your space with style and comfort.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h4>Areas We Service</h4>
+          <ul>
+            <li><a href="../areas/vesu-furniture.html">Vesu</a></li>
+            <li><a href="/areas/adajan.html">Adajan</a></li>
+            <li><a href="../areas/Nanpura.html">Nanpura</a></li>
+            <li><a href="../areas/Sagrampura.html">Sagrampura</a></li>
+            <li>
+              <strong>And <a href="#">MORE!</a></strong>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-box">
+          <h4>Important Links</h4>
+          <ul>
+            <li><a href="../about-us.html">About Us</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li>
+              <a href="../important-links/privacy.html">Privacy Notice</a>
+            </li>
+            <li>
+              <a href="../important-links/cookies-policy.html"
+                >Cookies Policy</a
+              >
+            </li>
+            <li>
+              <a href="../important-links/terms-conditions.html"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-box">
+          <h4>Contact Us</h4>
+          <p>🕒 Mon - Sat: 9:00 a.m. - 6:00 p.m.</p>
+          <p>📍 1/919, Nanpura, Surat – 395001</p>
+          <p>📞 +91 942-821-3314</p>
+          <p><a href="#" style="color: #ddd">service@funrixfurniture.com</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026, <strong>Funrix Furniture House</strong> | All Rights Reserved.
+        <br />
+        Funrix Furniture — Elegant, Durable & Comfortable Designs <br />
+        ⭐ 4.9 / 5 stars | Trusted by 8,006+ Customers
+      </div>
+    </footer>
+  </body>
+</html>

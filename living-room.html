@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funrix Furniture | Premium Furniture</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f6f6f6;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===== NAVBAR ===== */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #1f1f1f;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-list li {
+        margin: 0 15px;
+        position: relative;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .nav-list li a:hover {
+        color: #d4af37;
+      }
+
+      /* ===== LOGO ===== */
+      .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 6px;
+        background-color: #fff;
+        border: 3px solid #f4c430;
+      }
+
+      /* DROPDOWN */
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #1f1f1f;
+        min-width: 220px;
+        list-style: none;
+        display: none;
+        border-radius: 6px;
+        padding: 10px 0;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .dropdown-menu li {
+        padding: 8px 20px;
+      }
+
+      .dropdown-menu a {
+        color: #fff;
+        display: block;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      /* SEARCH */
+
+      /* ================= HERO ================= */
+      .hero {
+        height: 90vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+          url("https://media.designcafe.com/wp-content/uploads/2023/07/05120637/modern-furniture-designs.jpg")
+            center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+
+      .hero a {
+        padding: 12px 30px;
+        background: #f4c430;
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 30px;
+      }
+
+      /* ================= SECTIONS ================= */
+      section {
+        padding: 70px 80px;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 36px;
+        color: #1f1f1f;
+      }
+
+      /* ================= SERVICES ================= */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .service-box {
+        background: #fff;
+        padding: 30px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-box h3 {
+        margin-bottom: 15px;
+        color: #d4af37;
+      }
+
+      /* ================= ABOUT ================= */
+      /* ===== ABOUT SECTION ===== */
+      .about-section {
+        background: #ffffff;
+        padding: 80px 0;
+      }
+
+      .about-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      /* IMAGE */
+      .about-image img {
+        width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        object-fit: cover;
+      }
+
+      /* CONTENT */
+      .about-content h2 {
+        font-size: 36px;
+        color: #1f1f1f;
+        margin-bottom: 18px;
+      }
+
+      .about-content p {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+
+      /* BUTTON */
+      .about-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 34px;
+        background: #f4c430;
+        color: #000;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .about-btn:hover {
+        background: #d4af37;
+        transform: translateY(-2px);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .about-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .about-content h2 {
+          font-size: 28px;
+        }
+      }
+
+      /* ================= FOOTER ================= */
+      .footer {
+        background-color: #1f1f1f;
+        color: #ddd;
+        padding: 50px 50px 20px;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+
+      .footer-box h3,
+      .footer-box h4 {
+        color: #d4af37;
+        margin-bottom: 15px;
+      }
+
+      .footer-box p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .footer-box ul {
+        list-style: none;
+      }
+
+      .footer-box ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-box ul li a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+
+      .footer-box ul li a:hover {
+        color: #d4af37;
+      }
+
+      /* Footer Bottom */
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #333;
+        margin-top: 30px;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #aaa;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .rightNav {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 34px;
+        }
+
+        .cta h2 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/index.html">
+          <img src="../img/logo1.jpg" alt="Funrix Furniture Logo" />
+        </a>
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../about-us.html">ABOUT US</a></li>
+
+        <li class="dropdown">
+          <a href="#">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li><a href="bedroom.html">Bedroom Furniture</a></li>
+            <li>
+              <a href="living-room.html">Living Room Furniture</a>
+            </li>
+            <li>
+              <a href="Office-Furniture.html">Office Furniture</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="../gallery.html">GALLERY</a></li>
+        <li><a href="../contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <h1>Premium Furniture Solutions</h1>
+        <p>Modern • Durable • Custom Furniture in Surat</p>
+        <a href="#">Explore Services</a>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section>
+      <div class="section-title">
+        <h2>Our Services</h2>
+      </div>
+
+      <div class="services">
+        <div class="service-box">
+          <h3>Bedroom Furniture</h3>
+          <p>Custom beds, wardrobes & interiors.</p>
+        </div>
+
+        <div class="service-box">
+          <h3>Living Room</h3>
+          <p>Sofas, TV units & premium designs.</p>
+        </div>
+
+        <div class="service-box">
+          <h3>Office Furniture</h3>
+          <p>Modern workstations & cabins.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1615873968403-89e068629265"
+            alt="Living Room Furniture by Funrix"
+          />
+        </div>
+
+        <div class="about-content">
+          <h2>Living Room Furniture by Funrix</h2>
+
+          <p>
+            Funrix Furniture offers premium living room furniture designed to
+            elevate the beauty and comfort of your home. Our living room
+            solutions are crafted with high-quality materials and modern
+            aesthetics.
+          </p>
+
+          <p>
+            From stylish sofas and elegant TV units to center tables and storage
+            cabinets, we create furniture that perfectly matches your space and
+            lifestyle. Every piece is designed for durability, comfort, and
+            visual appeal.
+          </p>
+
+          <p>
+            Whether you prefer a modern, minimal, or luxurious look, our custom
+            living room furniture transforms your space into a welcoming and
+            stylish environment for family and guests.
+          </p>
+
+          <a href="contact.html" class="about-btn">Get Living Room Furniture</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- ABOUT -->
+        <div class="footer-box">
+          <h3>Funrix Furniture House</h3>
+          <p>
+            Funrix Furniture House crafts elegant, durable, and comfortable
+            furniture for modern homes and offices. Premium designs that
+            transform your space with style and comfort.
+          </p>
+        </div>
+
+        <!-- AREAS -->
+        <div class="footer-box">
+          <h4>Areas We Service</h4>
+          <ul>
+            <li><a href="../areas/vesu-furniture.html">Vesu</a></li>
+            <li><a href="/areas/adajan.html">Adajan</a></li>
+            <li><a href="../areas/Nanpura.html">Nanpura</a></li>
+            <li><a href="../areas/Sagrampura.html">Sagrampura</a></li>
+            <li>
+              <strong>And<a href="#">MORE!</a></strong>
+            </li>
+          </ul>
+        </div>
+
+        <!-- IMPORTANT LINKS -->
+        <div class="footer-box">
+          <h4>Important Links</h4>
+          <ul>
+            <li><a href="../about-us.html">About Us</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+                 <li>
+  <a href="../important-links/privacy.html">Privacy Notice</a>
+</li>
+
+<li>
+  <a href="../important-links/cookies-policy.html">
+    Cookies Policy
+  </a>
+</li>
+
+<li>
+  <a href="../important-links/terms-conditions.html">
+    Terms & Conditions
+  </a>
+</li>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+          <h4>Contact Us</h4>
+          <p>🕒 Mon - Sat: 9:00 a.m. - 6:00 p.m.</p>
+          <p>📍 1/919, Nanpura, Surat – 395001</p>
+          <p>📞 +91 942-821-3314</p>
+          <p>✉️ jyoti.sahani@buldel.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026, <strong>Funrix Furniture House</strong> | All Rights Reserved.
+        <br />
+        Funrix Furniture — Elegant, Durable & Comfortable Designs <br />
+        ⭐ 4.9 / 5 stars | Trusted by 8,006+ Customers
+      </div>
+    </footer>
+  </body>
+</html>

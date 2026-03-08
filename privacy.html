@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Notice | Funrix Furniture</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", Arial, sans-serif;
+      }
+      body {
+        background-color: #f7f7f7;
+        color: #333;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #1f1f1f;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+      .nav-list li {
+        margin: 0 15px;
+        position: relative;
+      }
+      .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+      .nav-list li a:hover {
+        color: #d4af37;
+      }
+      .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 6px;
+        background-color: #fff;
+        border: 3px solid #f4c430;
+      }
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #1f1f1f;
+        list-style: none;
+        padding: 10px 0;
+        display: none;
+        border-radius: 6px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        z-index: 999;
+      }
+      .dropdown-menu li {
+        padding: 8px 20px;
+      }
+      .dropdown-menu li a {
+        display: block;
+        color: #fff;
+      }
+      .dropdown-menu li a:hover {
+        color: #d4af37;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .hero {
+        height: 90vh;
+        background-image: url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.4) 50%,
+          rgba(0, 0, 0, 0.72) 100%
+        );
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-badge {
+        display: inline-block;
+        background: rgba(212, 175, 55, 0.2);
+        border: 1px solid rgba(212, 175, 55, 0.55);
+        color: #d4af37;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 7px 20px;
+        border-radius: 30px;
+        margin-bottom: 22px;
+      }
+      .hero h1 {
+        font-size: 60px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 14px;
+        letter-spacing: -1px;
+        text-shadow: 0 3px 24px rgba(0, 0, 0, 0.5);
+      }
+      .hero h1 span {
+        color: #d4af37;
+      }
+      .hero p {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.65);
+        font-weight: 300;
+        letter-spacing: 1.5px;
+      }
+      .hero-line {
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      }
+      .breadcrumb {
+        background: #fff;
+        padding: 14px 80px;
+        font-size: 13px;
+        border-bottom: 1px solid #ebebeb;
+        color: #999;
+      }
+      .breadcrumb a {
+        text-decoration: none;
+        color: #666;
+        transition: color 0.2s;
+      }
+      .breadcrumb a:hover {
+        color: #d4af37;
+      }
+      .breadcrumb .sep {
+        margin: 0 8px;
+        color: #ccc;
+      }
+      .breadcrumb .active {
+        color: #d4af37;
+        font-weight: 600;
+      }
+      .page-wrapper {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 35px;
+        align-items: start;
+      }
+      .sidebar {
+        position: sticky;
+        top: 90px;
+      }
+      .sidebar-card {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        border: 1px solid #f0f0f0;
+      }
+      .sidebar-header {
+        background: #1f1f1f;
+        padding: 18px 22px;
+        color: #d4af37;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .sidebar-nav {
+        list-style: none;
+        padding: 10px 0;
+      }
+      .sidebar-nav li a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 22px;
+        text-decoration: none;
+        color: #555;
+        font-size: 13px;
+        font-weight: 400;
+        transition: all 0.2s;
+        border-left: 3px solid transparent;
+      }
+      .sidebar-nav li a:hover {
+        color: #c89b3c;
+        border-left-color: #d4af37;
+        background: rgba(212, 175, 55, 0.05);
+        padding-left: 26px;
+      }
+      .sidebar-nav li a .num {
+        font-size: 11px;
+        color: #bbb;
+        font-weight: 600;
+        min-width: 18px;
+      }
+      .sidebar-info {
+        margin-top: 20px;
+        background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+        border-radius: 10px;
+        padding: 22px;
+        color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .sidebar-info .icon {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      .sidebar-info h4 {
+        color: #d4af37;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      .sidebar-info p {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
+      }
+      .sidebar-info a {
+        display: inline-block;
+        margin-top: 12px;
+        background: #d4af37;
+        color: #1f1f1f;
+        padding: 8px 18px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        transition: background 0.2s;
+      }
+      .sidebar-info a:hover {
+        background: #c89b3c;
+      }
+      .main-content {
+        background: #fff;
+        border-radius: 12px;
+        padding: 45px 50px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f0f0f0;
+      }
+      .content-meta {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding-bottom: 28px;
+        margin-bottom: 35px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .meta-badge {
+        background: rgba(212, 175, 55, 0.12);
+        color: #c89b3c;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 20px;
+      }
+      .meta-date {
+        font-size: 13px;
+        color: #999;
+      }
+      .meta-date strong {
+        color: #555;
+      }
+      .intro-text {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 38px;
+        padding: 22px 26px;
+        background: #fafafa;
+        border-left: 4px solid #d4af37;
+        border-radius: 0 8px 8px 0;
+      }
+      .section {
+        margin-bottom: 38px;
+        padding-bottom: 38px;
+        border-bottom: 1px solid #f4f4f4;
+        scroll-margin-top: 100px;
+      }
+      .section:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+      .section-num {
+        width: 32px;
+        height: 32px;
+        background: #1f1f1f;
+        color: #d4af37;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .section h2 {
+        color: #1f1f1f;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+      }
+      .section p {
+        font-size: 14.5px;
+        color: #555;
+        line-height: 1.85;
+        margin-bottom: 12px;
+      }
+      .info-list {
+        list-style: none;
+        margin-top: 14px;
+      }
+      .info-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px dashed #f0f0f0;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+      }
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+      .info-list li::before {
+        content: "x";
+        color: #d4af37;
+        font-size: 11px;
+        margin-top: 4px;
+        flex-shrink: 0;
+      }
+      .data-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 14px;
+        margin-top: 16px;
+      }
+      .data-card {
+        background: #fafafa;
+        border: 1px solid #ececec;
+        border-radius: 9px;
+        padding: 16px 15px;
+        font-size: 13px;
+        color: #555;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.2s;
+      }
+      .data-card:hover {
+        border-color: #d4af37;
+        background: rgba(212, 175, 55, 0.04);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 14px rgba(212, 175, 55, 0.1);
+      }
+      .data-card .dc-icon {
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .rights-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 16px;
+      }
+      .right-item {
+        background: #fafafa;
+        border: 1px solid #eeeeee;
+        border-radius: 8px;
+        padding: 15px 16px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13.5px;
+        color: #555;
+        line-height: 1.5;
+        transition: border-color 0.2s;
+      }
+      .right-item:hover {
+        border-color: #d4af37;
+      }
+      .right-item .ri-icon {
+        color: #d4af37;
+        font-size: 17px;
+        margin-top: 1px;
+        flex-shrink: 0;
+      }
+      .alert-box {
+        background: rgba(212, 175, 55, 0.07);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 8px;
+        padding: 18px 22px;
+        font-size: 14px;
+        color: #555;
+        line-height: 1.7;
+        margin-top: 14px;
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .alert-box .alert-icon {
+        font-size: 22px;
+        flex-shrink: 0;
+      }
+      .contact-box {
+        background: linear-gradient(135deg, #1a1a1a, #2d2a1e);
+        border-radius: 10px;
+        padding: 28px 30px;
+        color: #fff;
+        margin-top: 16px;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+      }
+      .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .contact-row:last-child {
+        margin-bottom: 0;
+      }
+      .contact-row .label {
+        color: #d4af37;
+        font-weight: 600;
+        min-width: 65px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .footer {
+        background-color: #0b0b0b;
+        color: #ddd;
+        padding: 50px 50px 20px;
+      }
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+      }
+      .footer-box h3,
+      .footer-box h4 {
+        color: #d4af37;
+        margin-bottom: 15px;
+      }
+      .footer-box p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .footer-box ul {
+        list-style: none;
+      }
+      .footer-box ul li {
+        margin-bottom: 10px;
+      }
+      .footer-box ul li a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 14px;
+        transition: color 0.3s;
+      }
+      .footer-box ul li a:hover {
+        color: #d4af37;
+      }
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #111010;
+        margin-top: 30px;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #aaa;
+      }
+      @media (max-width: 900px) {
+        .page-wrapper {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: static;
+        }
+        .main-content {
+          padding: 30px 24px;
+        }
+        .rights-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: 36px;
+        }
+        .navbar {
+          padding: 15px 20px;
+        }
+        .breadcrumb {
+          padding: 14px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="../index.html"
+          ><img src="../img/logo1.jpg" alt="Funrix Furniture Logo"
+        /></a>
+      </div>
+      <ul class="nav-list">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../about-us.html">ABOUT US</a></li>
+        <li class="dropdown">
+          <a href="#">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li><a href="../services/bedroom.html">Bedroom Furniture</a></li>
+            <li>
+              <a href="../services/living-room.html">Living Room Furniture</a>
+            </li>
+            <li>
+              <a href="../services/Office-Furniture.html">Office Furniture</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="../gallery.html">GALLERY</a></li>
+        <li><a href="../contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">Legal &amp; Transparency</div>
+        <h1>Privacy <span>Notice</span></h1>
+        <p>Your privacy matters &mdash; here&apos;s how we protect it</p>
+      </div>
+    </section>
+    <div class="hero-line"></div>
+
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="sep">/</span>
+      <span class="active">Privacy Notice</span>
+    </div>
+
+    <div class="page-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-header">On This Page</div>
+          <ul class="sidebar-nav">
+            <li>
+              <a href="#who-we-are"><span class="num">01</span> Who We Are</a>
+            </li>
+            <li>
+              <a href="#info-collect"
+                ><span class="num">02</span> Information We Collect</a
+              >
+            </li>
+            <li>
+              <a href="#how-collect"
+                ><span class="num">03</span> How We Collect Data</a
+              >
+            </li>
+            <li>
+              <a href="#how-use"><span class="num">04</span> How We Use It</a>
+            </li>
+            <li>
+              <a href="#data-protection"
+                ><span class="num">05</span> Data Protection</a
+              >
+            </li>
+            <li>
+              <a href="#sharing"
+                ><span class="num">06</span> Sharing of Information</a
+              >
+            </li>
+            <li>
+              <a href="#cookies"><span class="num">07</span> Cookies</a>
+            </li>
+            <li>
+              <a href="#your-rights"><span class="num">08</span> Your Rights</a>
+            </li>
+            <li>
+              <a href="#retention"
+                ><span class="num">09</span> Data Retention</a
+              >
+            </li>
+            <li>
+              <a href="#contact"
+                ><span class="num">10</span> Contact Information</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-info">
+          <div class="icon">&#128272;</div>
+          <h4>We Never Sell Your Data</h4>
+          <p>
+            Your personal information is never sold, rented, or shared with
+            advertisers. We use it only to serve you better.
+          </p>
+          <a href="../contact.html">Contact Us &#8594;</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="content-meta">
+          <span class="meta-badge">Privacy Notice</span>
+          <span class="meta-date"
+            ><strong>Last Updated:</strong> 25 February 2026</span
+          >
+        </div>
+
+        <p class="intro-text">
+          At <strong>Funrix Furniture</strong>, your privacy is very important
+          to us. This Privacy Notice explains how we collect, use, and protect
+          your personal data when you use our website or contact us for
+          furniture services.
+        </p>
+
+        <div class="section" id="who-we-are">
+          <div class="section-title">
+            <div class="section-num">1</div>
+            <h2>Who We Are</h2>
+          </div>
+          <p>
+            Funrix Furniture is a Surat-based furniture service provider
+            offering bedroom, living room, office furniture, and custom
+            furniture solutions. We operate this website and are fully
+            responsible for protecting your personal data in accordance with
+            applicable privacy laws.
+          </p>
+        </div>
+
+        <div class="section" id="info-collect">
+          <div class="section-title">
+            <div class="section-num">2</div>
+            <h2>Information We Collect</h2>
+          </div>
+          <p>We may collect the following types of personal information:</p>
+          <div class="data-grid">
+            <div class="data-card">
+              <span class="dc-icon">&#128100;</span> Full Name
+            </div>
+            <div class="data-card">
+              <span class="dc-icon">&#128222;</span> Phone Number
+            </div>
+            <div class="data-card">
+              <span class="dc-icon">&#128231;</span> Email Address
+            </div>
+            <div class="data-card">
+              <span class="dc-icon">&#128205;</span> Service Address
+            </div>
+            <div class="data-card">
+              <span class="dc-icon">&#128179;</span> Payment Details
+            </div>
+            <div class="data-card">
+              <span class="dc-icon">&#127760;</span> IP &amp; Browser Data
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="how-collect">
+          <div class="section-title">
+            <div class="section-num">3</div>
+            <h2>How We Collect Your Data</h2>
+          </div>
+          <p>
+            Your data may be collected when you interact with us through any of
+            the following:
+          </p>
+          <ul class="info-list">
+            <li>Request a quote through our website</li>
+            <li>Fill out a contact or inquiry form</li>
+            <li>Call or email us directly</li>
+            <li>Subscribe to our marketing updates or newsletter</li>
+            <li>Simply browse and use our website</li>
+          </ul>
+        </div>
+
+        <div class="section" id="how-use">
+          <div class="section-title">
+            <div class="section-num">4</div>
+            <h2>How We Use Your Information</h2>
+          </div>
+          <p>
+            We use the information we collect strictly for legitimate business
+            purposes:
+          </p>
+          <ul class="info-list">
+            <li>To respond to your inquiries and service requests</li>
+            <li>To provide and manage furniture services</li>
+            <li>To process payments securely</li>
+            <li>To improve our website functionality and content</li>
+            <li>To send promotional offers only if you have given consent</li>
+          </ul>
+        </div>
+
+        <div class="section" id="data-protection">
+          <div class="section-title">
+            <div class="section-num">5</div>
+            <h2>Data Protection</h2>
+          </div>
+          <p>
+            We implement appropriate technical and organizational security
+            measures to protect your personal data from unauthorized access,
+            alteration, disclosure, or destruction.
+          </p>
+          <div class="alert-box">
+            <span class="alert-icon">&#128737;</span>
+            <span
+              >We <strong>do not sell, rent, or trade</strong> your personal
+              information to any third parties under any circumstances. Your
+              data is used solely to serve you.</span
+            >
+          </div>
+        </div>
+
+        <div class="section" id="sharing">
+          <div class="section-title">
+            <div class="section-num">6</div>
+            <h2>Sharing of Information</h2>
+          </div>
+          <p>
+            We may share your data only with trusted service providers who
+            assist us in running our business such as payment processors, IT
+            support providers, or delivery partners. This is done strictly for
+            business purposes.
+          </p>
+          <p>
+            All third parties we work with are contractually required to keep
+            your information secure and confidential, and may not use it for any
+            other purpose.
+          </p>
+        </div>
+
+        <div class="section" id="cookies">
+          <div class="section-title">
+            <div class="section-num">7</div>
+            <h2>Cookies</h2>
+          </div>
+          <p>
+            Our website may use cookies to enhance user experience and analyze
+            website traffic patterns. Cookies help us understand how visitors
+            use our site so we can improve it continuously.
+          </p>
+          <p>
+            You can control or disable cookies at any time through your browser
+            settings. For full details, please refer to our
+            <a
+              href="cookies-policy.html"
+              style="color: #c89b3c; font-weight: 600"
+              >Cookies Policy</a
+            >.
+          </p>
+        </div>
+
+        <div class="section" id="your-rights">
+          <div class="section-title">
+            <div class="section-num">8</div>
+            <h2>Your Rights</h2>
+          </div>
+          <p>
+            As a user of our website and services, you have the following rights
+            regarding your personal data:
+          </p>
+          <div class="rights-grid">
+            <div class="right-item">
+              <span class="ri-icon">&#128203;</span
+              ><span>Request access to your personal data we hold</span>
+            </div>
+            <div class="right-item">
+              <span class="ri-icon">&#9999;</span
+              ><span>Request correction of any inaccurate information</span>
+            </div>
+            <div class="right-item">
+              <span class="ri-icon">&#128465;</span
+              ><span>Request deletion of your personal data</span>
+            </div>
+            <div class="right-item">
+              <span class="ri-icon">&#128277;</span
+              ><span>Withdraw marketing consent at any time</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="retention">
+          <div class="section-title">
+            <div class="section-num">9</div>
+            <h2>Data Retention</h2>
+          </div>
+          <p>
+            We retain your personal information only for as long as is necessary
+            to fulfil the purposes outlined in this Privacy Notice, unless a
+            longer retention period is required or permitted by law.
+          </p>
+          <p>
+            Once your data is no longer needed, we securely delete or anonymize
+            it in line with our internal data management policies.
+          </p>
+        </div>
+
+        <div class="section" id="contact">
+          <div class="section-title">
+            <div class="section-num">10</div>
+            <h2>Contact Information</h2>
+          </div>
+          <p>
+            If you have any questions, concerns, or requests regarding this
+            Privacy Notice or your personal data, please get in touch with us:
+          </p>
+          <div class="contact-box">
+            <div class="contact-row">
+              <span class="label">Business</span> Funrix Furniture House
+            </div>
+            <div class="contact-row">
+              <span class="label">Address</span> 1/919, Nanpura, Surat - 395001
+            </div>
+            <div class="contact-row">
+              <span class="label">Phone</span> +91 94282 13315
+            </div>
+            <div class="contact-row">
+              <span class="label">Email</span> service@funrixfurniture.com
+            </div>
+            <div class="contact-row">
+              <span class="label">Hours</span> Mon - Sat: 9:00 AM - 6:00 PM
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Funrix Furniture House</h3>
+          <p>
+            Funrix Furniture House crafts elegant, durable, and comfortable
+            furniture for modern homes and offices. Premium designs that
+            transform your space with style and comfort.
+          </p>
+        </div>
+        <div class="footer-box">
+          <h4>Areas We Service</h4>
+          <ul>
+            <li><a href="../areas/vesu-furniture.html">Vesu</a></li>
+            <li><a href="/areas/adajan.html">Adajan</a></li>
+            <li><a href="../areas/Nanpura.html">Nanpura</a></li>
+            <li><a href="../areas/Sagrampura.html">Sagrampura</a></li>
+            <li>
+              <strong>And <a href="#">MORE!</a></strong>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-box">
+          <h4>Important Links</h4>
+          <ul>
+            <li><a href="../about-us.html">About Us</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li>
+              <a href="../important-links/privacy.html">Privacy Notice</a>
+            </li>
+            <li>
+              <a href="../important-links/cookies-policy.html"
+                >Cookies Policy</a
+              >
+            </li>
+            <li>
+              <a href="../important-links/terms-conditions.html"
+                >Terms &amp; Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-box">
+          <h4>Contact Us</h4>
+          <p>Mon - Sat: 9:00 a.m. - 6:00 p.m.</p>
+          <p>1/919, Nanpura, Surat - 395001</p>
+          <p>+91 942-821-3314</p>
+          <p><a href="#" style="color: #ddd">service@funrixfurniture.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        2026, <strong>Funrix Furniture House</strong> | All Rights Reserved.<br />
+        Funrix Furniture - Elegant, Durable &amp; Comfortable Designs<br />
+        4.9 / 5 stars | Trusted by 8,006+ Customers
+      </div>
+    </footer>
+  </body>
+</html>
